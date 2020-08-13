@@ -70,5 +70,14 @@ Route::delete('/admin/brand/{brand}/delete', 'BrandController@delete')->name('ad
 Route::get('/admin/autocodes', 'AutocodeController@index')->name('admin.autocodes');
 Route::get('/admin/autocode/{code}/edit', 'AutocodeController@edit')->name('admin.editautocode');
 Route::put('/admin/autocode/{code}/edit', 'AutocodeController@update')->name('admin.updateautocode');
+// slider routes for admin
+Route::get('/admin/sliders', 'SliderController@index')->name('admin.sliders');
+Route::get('/admin/newslider', 'SliderController@new')->name('admin.newslider');
+Route::post('/admin/newslider', 'SliderController@add')->name('admin.newslider');
+Route::get('/admin/slider/{slider}/edit', 'SliderController@edit')->name('admin.editslider');
+Route::put('/admin/slider/{slider}/edit', 'SliderController@update')->name('admin.updateslider');
+Route::get('/admin/slider/{slider}/hide', 'SliderController@buttonhide')->name('admin.buttonhide');
+Route::get('/admin/slider/{slider}/show', 'SliderController@buttonshow')->name('admin.buttonshow');
+Route::delete('/admin/slider/{slider}/delete', 'SliderController@delete')->name('admin.deleteslider');
 
 Route::get('/home', 'HomeController@index')->name('home');

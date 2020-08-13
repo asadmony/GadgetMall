@@ -13,6 +13,7 @@
         <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
         <link href="{{ asset('assets/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         {{-- icons --}}
         <link href="{{ asset('assets/css/pe-icon-7-stroke.css') }}" rel="stylesheet" />
         <script src="{{ asset('assets/js/font-awesome.min.js') }}" ></script>
@@ -87,7 +88,16 @@
                             </a>
                             <a class="nav-link " href="{{ route('admin.newbrand') }}" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Add Band
+                                Add Brand
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Sliders</div>
+                            <a class="nav-link " href="{{ route('admin.sliders') }}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Slider List
+                            </a>
+                            <a class="nav-link " href="{{ route('admin.newslider') }}" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Add Slider
                             </a>
                             <div class="sb-sidenav-menu-heading">Auto Code Generator</div>
                             <a class="nav-link " href="{{ route('admin.autocodes') }}" >
@@ -131,6 +141,7 @@
                 </footer>
             </div>
         </div>
+        <script src="{{ asset('js/app.js') }}"> </script>
         <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}" ></script>
         <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" ></script>
         <script src="{{ asset('assets/js/scripts.js') }}"></script>

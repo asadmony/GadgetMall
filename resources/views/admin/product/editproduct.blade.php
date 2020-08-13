@@ -3,11 +3,11 @@
 <h1 class="mt-4">Products</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"> <a href="{{ route('admin.products') }}"> Products</a></li>
-                            <li class="breadcrumb-item active">Add Product</li>
+                            <li class="breadcrumb-item active">Update Product</li>
                         </ol>
 <div class="container">
         <div class="header">
-            <h2>Add Product</h2>
+            <h2>Update Product</h2>
             <hr>
             <x-alert />
         </div>

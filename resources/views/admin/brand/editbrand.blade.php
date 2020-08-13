@@ -8,7 +8,7 @@
                         </ol>
 <div class="container">
         <div class="header">
-            <h2>Add Brand</h2>
+            <h2>Edit Brand</h2>
             <hr>
         </div>
         <div class="" style="">

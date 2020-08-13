@@ -1,7 +1,7 @@
 @extends('layouts.homelayout')
 @section('content')
 		<!-- Slide -->
-	<section>
+	<section class="">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">

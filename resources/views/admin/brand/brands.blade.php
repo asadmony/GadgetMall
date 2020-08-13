@@ -36,16 +36,20 @@
                                 </td>
                                 <td>{{ $brand->brandname }}</td>
                                 <td>
-                                    <a class="btn btn-primary" href="{{ route('admin.editbrand',$brand->id) }}"> <i class="fa fa-edit"></i> Edit</a>
-                                    <a class="btn btn-danger " href="" onclick="event.preventDefault();
-                                    if(confirm('Are you sure to delete?')){
-                                        document.getElementById('form-delete-{{ $brand->id }}')
-                                        .submit()
-                                    }"> <i class="fa fa-trash"></i> Delete</a>
-                                    <form style="display: none;" id="form-delete-{{ $brand->id }}" method="POST" action="{{ route('admin.deletebrand', $brand->id) }}">
-                                        @csrf
-                                        @method('delete')
-                                    </form>
+                                    <div class="p-2">
+                                        <a class="btn btn-primary" href="{{ route('admin.editbrand',$brand->id) }}"> <i class="fa fa-edit"></i> Edit</a>
+                                    </div>
+                                    <div class="p-2">
+                                        <a class="btn btn-danger " href="" onclick="event.preventDefault();
+                                        if(confirm('Are you sure to delete?')){
+                                            document.getElementById('form-delete-{{ $brand->id }}')
+                                            .submit()
+                                        }"> <i class="fa fa-trash"></i> Delete</a>
+                                        <form style="display: none;" id="form-delete-{{ $brand->id }}" method="POST" action="{{ route('admin.deletebrand', $brand->id) }}">
+                                            @csrf
+                                            @method('delete')
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach

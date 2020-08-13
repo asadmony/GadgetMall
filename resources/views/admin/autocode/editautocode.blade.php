@@ -7,7 +7,7 @@
 </ol>
 <div class="container">
         <div class="header">
-            <h2>Add Brand</h2>
+            <h2>Update Auto Code</h2>
             <hr>
             <x-alert />
         </div>

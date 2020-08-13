@@ -36,16 +36,20 @@
                                 </td>
                                 <td>{{ $cat->catname }}</td>
                                 <td>
-                                    <a class="btn btn-primary" href="{{ route('admin.editcategory',$cat->id) }}"> <i class="fa fa-edit"></i> Edit</a>
-                                    <a class="btn btn-danger " href="" onclick="event.preventDefault();
-                                    if(confirm('Are you sure to delete?')){
-                                        document.getElementById('form-delete-{{ $cat->id }}')
-                                        .submit()
-                                    }"> <i class="fa fa-trash"></i> Delete</a>
-                                    <form style="display: none;" id="form-delete-{{ $cat->id }}" method="POST" action="{{ route('admin.deletecategory', $cat->id) }}">
-                                        @csrf
-                                        @method('delete')
-                                    </form>
+                                    <div class="p-2">
+                                        <a class="btn btn-primary" href="{{ route('admin.editcategory',$cat->id) }}"> <i class="fa fa-edit"></i> Edit</a>
+                                    </div>
+                                    <div class="p-2">
+                                        <a class="btn btn-danger " href="" onclick="event.preventDefault();
+                                        if(confirm('Are you sure to delete?')){
+                                            document.getElementById('form-delete-{{ $cat->id }}')
+                                            .submit()
+                                        }"> <i class="fa fa-trash"></i> Delete</a>
+                                        <form style="display: none;" id="form-delete-{{ $cat->id }}" method="POST" action="{{ route('admin.deletecategory', $cat->id) }}">
+                                            @csrf
+                                            @method('delete')
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach

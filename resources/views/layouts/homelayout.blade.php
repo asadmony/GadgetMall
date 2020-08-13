@@ -48,7 +48,9 @@
 						<div class="col-md-3">
 							<div class="header-logo">
 								<a href="#" class="logo">
-									<img src="./img/logo.png" alt="">
+									<h2 style="color: green; padding-top: .5em;">
+                                        {{ config('app.name') }}
+                                    </h2>
 								</a>
 							</div>
 						</div>
