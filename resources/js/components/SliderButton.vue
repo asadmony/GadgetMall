@@ -23,7 +23,7 @@
                         this.status = 0
                     });
                 } else {
-                    axios.get('/admin/slider/3/show')
+                    axios.get('/admin/slider/'+this.slider+'/show')
                     .then(response =>{
                         this.status = 1
                     });
