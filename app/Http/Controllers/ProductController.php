@@ -61,6 +61,34 @@ class ProductController extends Controller
         $product->update($data);
         return redirect(route('admin.products'))->with('message', 'Product is Updated successfully');
     }
+    public function available(Product $product)
+    {
+        if ($product->available) {
+            $data =[
+                'available' => 0
+            ];
+        }else {
+            $data = [
+                'available' => 1
+            ];
+        }
+        $product->update($data);
+        return $data['available'];
+    }
+    public function visibility(Product $product)
+    {
+        if ($product->visibility) {
+            $data =[
+                'visibility' => 0
+            ];
+        }else {
+            $data = [
+                'visibility' => 1
+            ];
+        }
+        $product->update($data);
+        return $data['visibility'];
+    }
     public function delete(Product $product)
     {
         $images = $product->images;

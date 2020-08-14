@@ -45,7 +45,7 @@
                                 <td>{{ $slider->title }}</td>
                                 <td>{{ $slider->details }}</td>
                                 <td>
-                                    <div id="app">
+                                    <div>
                                         <slider-button button="{{ $slider->button }}" slider="{{ $slider->id }}"></slider-button>
                                     </div>
                                 </td>

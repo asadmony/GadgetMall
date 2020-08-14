@@ -20,6 +20,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('slider-button', require('./components/SliderButton.vue').default);
+Vue.component('product-available', require('./components/ProductAvailable.vue').default);
+Vue.component('product-visibility', require('./components/ProductVisibility.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

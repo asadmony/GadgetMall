@@ -10,10 +10,10 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Admin Panel | {{ config('app.name') }}</title>
         {{-- style --}}
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
         <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
         <link href="{{ asset('assets/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         {{-- icons --}}
         <link href="{{ asset('assets/css/pe-icon-7-stroke.css') }}" rel="stylesheet" />
         <script src="{{ asset('assets/js/font-awesome.min.js') }}" ></script>
@@ -123,7 +123,7 @@
             </div>
             <div id="layoutSidenav_content">
                 <main class="">
-                    <div class="container-fluid">
+                    <div id="app" class="container-fluid">
                         @yield('content')
                     </div>
                 </main>
@@ -141,10 +141,10 @@
                 </footer>
             </div>
         </div>
-        <script src="{{ asset('js/app.js') }}"> </script>
         <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }}" ></script>
         <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" ></script>
         <script src="{{ asset('assets/js/scripts.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"> </script>
         <script src="{{ asset('assets/js/Chart.min.js') }}" ></script>
         <script src="{{ asset('assets/js/demo/chart-area-demo.js') }}"></script>
         <script src="{{ asset('assets/js/demo/chart-bar-demo.js') }}"></script>

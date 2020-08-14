@@ -44,6 +44,8 @@ Route::put('/admin/product/{product}/edit', 'ProductController@update')->name('a
 Route::delete('/admin/product/{product}/delete', 'ProductController@delete')->name('admin.deleteproduct');
 Route::put('/admin/product/{product}/setdiscount', 'ProductController@setdiscount')->name('admin.setdiscount');
 Route::put('/admin/product/{product}/removediscount', 'ProductController@removediscount')->name('admin.removediscount');
+Route::post('/admin/product/{product}/available', 'ProductController@available')->name('admin.productavailable');
+Route::post('/admin/product/{product}/visibility', 'ProductController@visibility')->name('admin.productvisibility');
 // product photos routes for admin
 Route::get('/admin/product/{product}/images', 'ProductImageController@index')->name('admin.productimages');
 Route::post('/admin/product/{product}/images', 'ProductImageController@upload')->name('admin.addproductimage');

@@ -103,6 +103,12 @@
                                         <a class="btn btn-info btn-sm" href="{{ route('admin.productimages',$product->id) }}"> <i class="pe-7s-photo"></i> Images</a>
                                     </div>
                                     <div class="p-2">
+                                        <product-available available="{{ $product->available }}" product="{{ $product->id }}"></product-available>
+                                    </div>
+                                    <div class="p-2">
+                                        <product-visibility visibility="{{ $product->visibility }}" product="{{ $product->id }}"></product-visibility>
+                                    </div>
+                                    <div class="p-2">
                                         <a class="btn btn-primary btn-sm" href="{{ route('admin.editproduct',$product->id) }}"> <i class="fa fa-edit"></i> Edit</a>
                                     </div>
                                     <div class="p-2">

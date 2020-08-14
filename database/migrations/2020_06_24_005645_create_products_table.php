@@ -23,6 +23,8 @@ class CreateProductsTable extends Migration
             $table->integer('price');
             $table->float('discount')->default(0);
             $table->integer('discountprice')->nullable();
+            $table->boolean('available')->nullable()->default(true);
+            $table->boolean('visibility')->nullable()->default(true);
             $table->integer('quantity');
             $table->timestamps();
             $table->collation = 'utf8_general_ci';
