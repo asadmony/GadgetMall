@@ -1935,7 +1935,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     buttontext: function buttontext() {
-      return this.status == 1 ? 'set Out of Stock' : 'set Available';
+      return this.status == 1 ? 'set "Out of Stock"' : 'set "Available"';
     }
   }
 });
@@ -37618,7 +37618,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("button", {
-      staticClass: "btn btn-info",
+      staticClass: "dropdown-item",
       domProps: { textContent: _vm._s(_vm.buttontext) },
       on: { click: _vm.togglebutton }
     })
@@ -37648,7 +37648,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("button", {
-      staticClass: "btn btn-info",
+      staticClass: "dropdown-item",
       domProps: { textContent: _vm._s(_vm.buttontext) },
       on: { click: _vm.togglebutton }
     })

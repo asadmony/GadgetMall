@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="btn btn-info" @click="togglebutton" v-text="buttontext">  </button>
+        <button class="dropdown-item" @click="togglebutton" v-text="buttontext">  </button>
     </div>
 </template>
 

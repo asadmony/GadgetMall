@@ -22,7 +22,7 @@
                                 <th width="15%">Features</th>
                                 <th>Category</th>
                                 <th>Brand</th>
-                                <th width="6%">Price</th>
+                                <th width="8%">Price</th>
                                 <th width="3%">Discount%</th>
                                 <th width="3%">Discount Price</th>
                                 <th width="3%">Quantity</th>
@@ -99,20 +99,16 @@
                                 <td> &#2547 {{ $product->discountprice }}</td>
                                 <td>{{ $product->quantity }}</td>
                                 <td>
-                                    <div class="p-2">
+                                    <div class=" text-center p-2">
                                         <a class="btn btn-info btn-sm" href="{{ route('admin.productimages',$product->id) }}"> <i class="pe-7s-photo"></i> Images</a>
                                     </div>
-                                    <div class="p-2">
+                                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog fa-fw"></i> options </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                                         <product-available available="{{ $product->available }}" product="{{ $product->id }}"></product-available>
-                                    </div>
-                                    <div class="p-2">
                                         <product-visibility visibility="{{ $product->visibility }}" product="{{ $product->id }}"></product-visibility>
-                                    </div>
-                                    <div class="p-2">
-                                        <a class="btn btn-primary btn-sm" href="{{ route('admin.editproduct',$product->id) }}"> <i class="fa fa-edit"></i> Edit</a>
-                                    </div>
-                                    <div class="p-2">
-                                        <a class="btn btn-danger btn-sm" href="" onclick="event.preventDefault();
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="{{ route('admin.editproduct',$product->id) }}"><i class="fa fa-edit"></i> Edit</a>
+                                        <a class="dropdown-item" href="" onclick="event.preventDefault();
                                         if(confirm('Are you sure to delete?')){
                                             document.getElementById('form-delete-{{ $product->id }}')
                                             .submit()

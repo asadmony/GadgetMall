@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button class="btn btn-info" @click="togglebutton" v-text="buttontext">  </button>
+        <button class="dropdown-item" @click="togglebutton" v-text="buttontext">  </button>
     </div>
 </template>
 
@@ -25,7 +25,7 @@
         },
         computed: {
             buttontext(){
-                return (this.status == 1) ? 'set Out of Stock' : 'set Available';
+                return (this.status == 1) ? 'set "Out of Stock"' : 'set "Available"';
             }
         }
     }
